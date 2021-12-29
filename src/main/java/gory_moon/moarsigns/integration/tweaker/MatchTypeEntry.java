@@ -73,6 +73,11 @@ public class MatchTypeEntry implements IIngredient {
     }
 
     @Override
+    public boolean matchesExact(IItemStack item) {
+        return false;
+    }
+
+    @Override
     public boolean matches(ILiquidStack iLiquidStack) {
         return false;
     }

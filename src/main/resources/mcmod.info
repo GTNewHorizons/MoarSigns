@@ -1,10 +1,10 @@
 [
 {
-  "modid": "MoarSigns",
-  "name": "MoarSigns",
+  "modid": "${modId}",
+  "name": "${modId}",
   "description": "A mod that adds a lot of different signs.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "version": "${modVersion}",
+  "mcversion": "${minecraftVersion}",
   "url": "http://www.minecraftforum.net/topic/2621461-",
   "updateUrl": "",
   "authorList": ["Gory_Moon"],
