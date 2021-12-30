@@ -15,7 +15,6 @@ import gory_moon.moarsigns.client.interfaces.GuiHandler;
 import gory_moon.moarsigns.integration.IntegrationHandler;
 import gory_moon.moarsigns.integration.tweaker.MineTweakerIntegration;
 import gory_moon.moarsigns.items.ModItems;
-import gory_moon.moarsigns.items.NuggetRegistry;
 import gory_moon.moarsigns.lib.ModInfo;
 import gory_moon.moarsigns.network.PacketHandler;
 import gory_moon.moarsigns.proxy.CommonProxy;
@@ -63,7 +62,6 @@ public class MoarSigns {
 
         PacketHandler.init();
 
-        NuggetRegistry.init();
         Blocks.init();
         ModItems.init();
     }
@@ -89,15 +87,6 @@ public class MoarSigns {
 
         if (Loader.isModLoaded("MineTweaker3")) {
             MineTweakerIntegration.register();
-        }
-    }
-
-    @EventHandler
-    public void invalidFingerprint(FMLFingerprintViolationEvent event) {
-        if (ModInfo.FINGERPRINT.equals("@FINGERPRINT@")) {
-            logger.info("The copy of MoarSigns that you are running is a development version of the mod, and as such may be unstable and/or incomplete.");
-        } else {
-            logger.warn("The copy of MoarSigns that you are running has been modified from the original, and unpredictable things may happen. Please consider re-downloading the original version of the mod.");
         }
     }
 
